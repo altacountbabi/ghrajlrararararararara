@@ -1,4 +1,4 @@
-local lib = {}
+lib = {}
 local dependencies = {
     firetouchinterest,
     fireproximityprompt,
