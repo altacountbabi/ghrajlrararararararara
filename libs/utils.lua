@@ -81,12 +81,12 @@ function lib.canEquipGlove(glove)
     }
 
     local stands = workspace:WaitForChild('Lobby'):WaitForChild('GloveStands')
-    local stand = stands[glove]
-    local slaps = tonumber(stand:WaitForChild('SlapsInfoPart'):WaitForChild('SurfaceGui'):WaitForChild('TextLabel').Text)
-    if slaps > lib.getSlaps() then
-        return false
-    else
-        return true
+    for index, value in next, gloves do
+        if tostring(index:lower()):match(glove:lower()) then
+            local stand = stands[value]
+            local slaps = tonumber(stand:WaitForChild('SlapsInfoPart'):WaitForChild('SurfaceGui'):WaitForChild('TextLabel').Text)
+            if slaps > lib.getSlaps() then return false else return true end
+        end
     end
 end
 
