@@ -31,6 +31,55 @@ function lib.getSlaps()
 end
 
 function lib.canEquipGlove(glove)
+    local gloves = {
+        default = "Default",
+        diamond = "Diamond",
+        zzzzzzz = "ZZZZZZZ",
+        extended = "Extended",
+        brick = "Brick",
+        snow = "Snow",
+        pull = "Pull",
+        flash = "Flash",
+        spring = "Spring",
+        swapper = "Swapper",
+        bull = "Bull",
+        dice = "Dice",
+        ghost = "Ghost",
+        thanos = "Thanos",
+        stun = "Stun",
+        zaHando = "ZaHando",
+        fort = "Fort",
+        magnet = "Magnet",
+        pusher = "Pusher",
+        anchor = "Anchor",
+        space = "Space",
+        boomerang = "Boomerang",
+        dream = "Dream",
+        mail= "Mail",
+        thick= "T H I C K",
+        golden= "Golden",
+        cheeky= "Cheeky",
+        reaper= "Reaper",
+        replica= "Replica",
+        defense= "Defense",
+        killstreak= "KillStreak",
+        reverse= "Reverse",
+        shukuchi= "Shukuchi",
+        duelist= "Duelist",
+        woah= "woah",
+        ice= "Ice",
+        adios= "Adios",
+        blocked= "Blocked",
+        engineer= "Engineer",
+        rocky= "Rocky",
+        conveyor= "Conveyor",
+        phantom= "Phantom",
+        wormhole= "WormHole",
+        stop= "STOP",
+        godsHand= "GodsHand",
+        flex = "Flex"
+    }
+
     local stands = workspace:WaitForChild('Lobby'):WaitForChild('GloveStands')
     local stand = stands[glove]
     local slaps = tonumber(stand:WaitForChild('SlapsInfoPart'):WaitForChild('SurfaceGui'):WaitForChild('TextLabel').Text)
@@ -43,8 +92,61 @@ end
 
 function lib.setGlove(glove)
     if lib.canEquipGlove(glove) then
-        local stand = workspace:WaitForChild('Lobby')[glove]
-        libs.firing.click(stand:FindFirstChildOfClass('ClickDetector'))
+        local gloves = {
+            default = "DefaultGlove",
+            diamond = "DiamondGlove",
+            zzzzzzz = "ZZZZZZZ",
+            extended = "Extended",
+            brick = "Brick",
+            snow = "Snow",
+            pull = "Pull",
+            flash = "Flash",
+            spring = "Spring",
+            swapper = "Swapper",
+            bull = "Bull",
+            dice = "Dice",
+            ghost = "Ghost",
+            thanos = "Thanos",
+            stun = "Stun",
+            zaHando = "ZaHando",
+            fort = "Fort",
+            magnet = "Magnet",
+            pusher = "Pusher",
+            anchor = "Anchor",
+            space = "Space",
+            boomerang = "Boomerang",
+            dream = "Dream",
+            mail= "Mail",
+            thick= "T H I C K",
+            golden= "Golden",
+            cheeky= "Cheeky",
+            reaper= "Reaper",
+            replica= "Replica",
+            defense= "Defense",
+            killstreak= "KillStreak",
+            reverse= "Reverse",
+            shukuchi= "Shukuchi",
+            duelist= "Duelist",
+            woah= "woah",
+            ice= "Ice",
+            adios= "Adios",
+            blocked= "Blocked",
+            engineer= "Engineer",
+            rocky= "Rocky",
+            conveyor= "Conveyor",
+            phantom= "Phantom",
+            wormhole= "WormHole",
+            stop= "STOP",
+            godsHand= "GodsHand",
+            flex = "Flex"
+        }
+
+        for index, value in next, gloves do
+            if tostring(index:lower()):match(glove:lower()) then
+                local stand = workspace:WaitForChild('Lobby')[value]
+                libs.firing.click(stand:FindFirstChildOfClass('ClickDetector'))
+            end
+        end
     end
 end
 
