@@ -9,7 +9,7 @@ local mouse = lp:GetMouse()
 local char = lp.Character or workspace:WaitForChild(lp.Name)
 
 function loadLib(name)
-    local github = 'https://github.com/altacountbabi/ghrajlrararararararara/blob/main/libs/'..name..'.lua'
+    local github = 'https://raw.githubusercontent.com/altacountbabi/ghrajlrararararararara/main/libs/'..name..'.lua'
     return loadstring(game:HttpGet(github))()
 end
 
@@ -20,4 +20,4 @@ local libs = {
     utils = loadLib('utils')
 }
 
-libs.utils.setGlove('Killstreak')
+libs.utils.setGlove('DiamondGlove')
