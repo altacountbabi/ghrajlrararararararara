@@ -49,15 +49,12 @@ function lib.setGlove(glove)
 end
 
 function lib.isAlive()
-    if char.Humanoid.Health == 0 then
-        return false
-    else
-        return true
-    end
+    if char.Humanoid.Health == 0 then return false else return true end
 end
 
 function lib.spawn()
     lib.tp(workspace:WaitForChild('Lobby'):WaitForChild('Teleport1').CFrame)
 end
+
 
 return lib
