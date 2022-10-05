@@ -144,6 +144,7 @@ function lib.setGlove(glove)
         for index, value in next, gloves do
             if tostring(index:lower()):match(glove:lower()) then
                 local stand = workspace:WaitForChild('Lobby')[value]
+                print(stand)
                 libs.firing.click(stand:FindFirstChildOfClass('ClickDetector'))
             end
         end

@@ -20,4 +20,4 @@ local libs = {
     utils = loadLib('utils')
 }
 
-libs.utils.setGlove('DiamondGlove')
+libs.utils.setGlove('diamond')
