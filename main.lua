@@ -15,7 +15,9 @@ end
 
 
 local libs = {
-    loadLib('fire'),
-    loadLib('input'),
-    loadLib('utils')
+    fire = loadLib('fire'),
+    input = loadLib('input'),
+    utils = loadLib('utils')
 }
+
+libs.utils.setGlove('Killstreak')
