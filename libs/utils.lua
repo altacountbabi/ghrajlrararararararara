@@ -43,7 +43,8 @@ end
 
 function lib.setGlove(glove)
     if lib.canEquipGlove(glove) then
-        libs.firing.click()
+        local stand = workspace:WaitForChild('Lobby')[glove]
+        libs.firing.click(stand:FindFirstAncestorOfClass('ClickDetector'))
     end
 end
 
