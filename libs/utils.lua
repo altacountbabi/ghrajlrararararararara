@@ -56,7 +56,6 @@ function lib.isAlive()
     end
 end
 
-
 function lib.spawn()
     lib.tp(workspace:WaitForChild('Lobby'):WaitForChild('Teleport1').CFrame)
 end
