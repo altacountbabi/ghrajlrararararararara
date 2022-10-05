@@ -1,7 +1,7 @@
 lib = {}
 local dependencies = {}
 
-for _,dependency in next, dependencies do if not dependency then return 'libs\\fire.lua' end end
+for _,dependency in next, dependencies do if not dependency then return 'libs\\input.lua' end end
 local vim = game:GetService('VirtualInputManager')
 
 

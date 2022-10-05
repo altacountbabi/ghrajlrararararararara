@@ -8,4 +8,3 @@ local libs = {
     input = loadLib('input')
 }
 
-libs.input.press(Enum.KeyCode.Escape)
