@@ -24,8 +24,7 @@ function lib.touch(part)
 end
 
 function lib.click(clickdetector)
-    fireclickdetector(clickdetector)
+    fireclickdetector(clickdetector, math.huge)
 end
-
 
 return lib
