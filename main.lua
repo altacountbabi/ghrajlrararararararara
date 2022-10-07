@@ -21,3 +21,16 @@ local libs = {
 }
 
 libs.utils.setGlove('diamond')
+
+for i=0,5 do
+    local cf = game.Players.LocalPlayer.Character.Head.CFrame
+    for _,v in next, workspace.vendings:GetChildren() do
+        if v:FindFirstChildOfClass('ProximityPrompt') then
+            game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(v.CFrame)
+            task.wait(0.21)
+            fireproximityprompt(v:FindFirstChildOfClass('ProximityPrompt'), math.huge)
+        end
+    end
+    task.wait()
+    game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(cf)
+end
